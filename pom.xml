@@ -21,6 +21,7 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <lombok.version>1.18.6</lombok.version>
         <schedulerx2.version>1.2.1.1</schedulerx2.version>
     </properties>
 
@@ -31,6 +32,11 @@
                 <groupId>com.aliyun.schedulerx</groupId>
                 <artifactId>schedulerx2-worker</artifactId>
                 <version>${schedulerx2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

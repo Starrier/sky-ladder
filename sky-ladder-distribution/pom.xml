@@ -10,14 +10,23 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>org.starrier</groupId>
     <artifactId>sky-ladder-distribution</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>sky-ladder-redis</module>
+    </modules>
+
 
     <dependencies>
         <dependency>
             <groupId>com.aliyun.schedulerx</groupId>
             <artifactId>schedulerx2-worker</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
 
