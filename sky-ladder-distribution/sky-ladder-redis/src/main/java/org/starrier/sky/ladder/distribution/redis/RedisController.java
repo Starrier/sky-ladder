@@ -1,6 +1,7 @@
 package org.starrier.sky.ladder.distribution.redis;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.script.DefaultRedisScript;
@@ -20,6 +21,7 @@ import java.util.List;
 @RestController
 public class RedisController {
 
+    @Autowired
     private RedisTemplate redisTemplate;
 
     @GetMapping
