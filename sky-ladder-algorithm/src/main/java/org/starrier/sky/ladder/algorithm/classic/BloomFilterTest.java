@@ -1,4 +1,4 @@
-package org.starrier.sky.ladder.algorithm;
+package org.starrier.sky.ladder.algorithm.classic;
 
 import java.util.BitSet;
 
