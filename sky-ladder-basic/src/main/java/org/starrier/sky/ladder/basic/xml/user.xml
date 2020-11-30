@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+    <module id="1">
+        <user index="1">
+            <name>tom</name>
+            <password>12345</password>
+            <date>20150526</date>
+        </user>
+        <user index="2">
+            <name>jack</name>
+            <password>5%</password>
+            <date>20150526</date>
+        </user>
+        <user index="3">
+            <name>john</name>
+            <password>5%</password>
+            <date>20150526</date>
+        </user>
+    </module>
+</users>
