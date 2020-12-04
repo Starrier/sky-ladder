@@ -25,7 +25,7 @@ public class RedisController {
     private RedisTemplate redisTemplate;
 
     @GetMapping
-    public ResponseEntity<Object> redisLuaTest(){
+    public ResponseEntity<Object> redisLuaTest() {
         DefaultRedisScript<Boolean> redisScript = new DefaultRedisScript<>();
         redisScript.setScriptSource(new ResourceScriptSource(new ClassPathResource("script/Test.lua")));
         redisScript.setResultType(Boolean.class);

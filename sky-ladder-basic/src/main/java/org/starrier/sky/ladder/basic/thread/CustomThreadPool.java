@@ -14,24 +14,19 @@ public final class CustomThreadPool {
      * 线程池中默认 工作线程数
      */
     private static int workerNum = 5;
-
-    /**
-     * 工作线程
-     */
-    private WorkThread[] workThreads;
-
     /**
      * 未处理的任务
      */
     private static volatile int finishedTasks = 0;
-
+    private static CustomThreadPool customThreadPool;
+    /**
+     * 工作线程
+     */
+    private WorkThread[] workThreads;
     /**
      * 任务阻塞队列
      */
     private List<Runnable> taskWaitQueue = new ArrayList<>();
-
-
-    private static CustomThreadPool customThreadPool;
 
     /**
      * 创建一个默认的
@@ -113,7 +108,7 @@ public final class CustomThreadPool {
             workThreads[i].stopWorker();
             workThreads[i] = null;
         }
-        customThreadPool=null;
+        customThreadPool = null;
         // 清空任务队列
         taskWaitQueue.clear();
     }

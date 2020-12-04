@@ -14,13 +14,13 @@ public class Maps {
         System.out.println(caculate());
     }
 
-    public static Map<Integer,Integer> caculate(){
+    public static Map<Integer, Integer> caculate() {
 
-        Map<Integer,Integer> target = new HashMap<>();
+        Map<Integer, Integer> target = new HashMap<>();
 
         for (int i = 0; i < 10; i++) {
 
-        target.put (i,   target.getOrDefault(i,1));
+            target.put(i, target.getOrDefault(i, 1));
 
         }
 

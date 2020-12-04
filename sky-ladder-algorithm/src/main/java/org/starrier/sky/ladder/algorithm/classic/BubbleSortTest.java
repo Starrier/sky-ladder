@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 /**
  * 经典排序  - 冒泡排序
+ *
  * @author starrier
  * @date 2020/11/27
  */
@@ -17,18 +18,18 @@ public class BubbleSortTest {
     }
 
 
-    public static int[] bubbleSort(int [] nums){
+    public static int[] bubbleSort(int[] nums) {
 
-        if(nums == null || nums.length <= 1){
+        if (nums == null || nums.length <= 1) {
             return nums;
         }
 
-        for (int i = 0; i <nums.length-1; i++) {
-            for (int j = 0; j < nums.length-1; j++) {
-                if(nums[j]>nums[i]){
+        for (int i = 0; i < nums.length - 1; i++) {
+            for (int j = 0; j < nums.length - 1; j++) {
+                if (nums[j] > nums[i]) {
                     int temp = nums[i];
                     nums[i] = nums[j];
-                    nums[j] =temp;
+                    nums[j] = temp;
                 }
             }
         }

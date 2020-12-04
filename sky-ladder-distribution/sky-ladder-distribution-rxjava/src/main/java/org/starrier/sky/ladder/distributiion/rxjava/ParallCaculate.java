@@ -47,7 +47,6 @@ public class ParallCaculate {
         System.out.println(end);
 
 
-
     }
 
 }

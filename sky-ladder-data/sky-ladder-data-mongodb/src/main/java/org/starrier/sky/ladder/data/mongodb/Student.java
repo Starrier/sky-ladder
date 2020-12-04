@@ -21,7 +21,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Student {
 
     @Id
-    private Long  id;
+    private Long id;
 
     private String name;
 

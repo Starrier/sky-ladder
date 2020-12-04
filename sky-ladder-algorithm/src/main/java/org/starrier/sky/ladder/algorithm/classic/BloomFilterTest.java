@@ -4,7 +4,7 @@ import java.util.BitSet;
 
 /**
  * 布隆过滤器
- *
+ * <p>
  * {@link }
  *
  * @author starrier
@@ -26,6 +26,14 @@ public class BloomFilterTest {
         }
     }
 
+    public static void main(String[] args) {
+        final String value = "starrier@starrier.org";
+        BloomFilterTest filterT = new BloomFilterTest();
+        System.out.println(filterT.contains(value));
+        filterT.add(value);
+        System.out.println(filterT.contains(value));
+    }
+
     public void add(String value) {
         for (SimpleHash f : func) {
             bits.set(f.hash(value), true);
@@ -39,7 +47,6 @@ public class BloomFilterTest {
         }
         return ret;
     }
-
 
     public static class SimpleHash {
 
@@ -63,13 +70,5 @@ public class BloomFilterTest {
             }
             return (cap - 1) & result;
         }
-    }
-
-    public static void main(String[] args) {
-        final String value = "starrier@starrier.org";
-        BloomFilterTest filterT = new BloomFilterTest();
-        System.out.println(filterT.contains(value));
-        filterT.add(value);
-        System.out.println(filterT.contains(value));
     }
 }

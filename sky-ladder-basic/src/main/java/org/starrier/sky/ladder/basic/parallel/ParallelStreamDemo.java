@@ -17,7 +17,7 @@ public class ParallelStreamDemo {
         List<Student> listB = StudentFactory.createListB();
     }
 
-    private static void parallelStream(List<Student> students){
+    private static void parallelStream(List<Student> students) {
         students.parallelStream()
                 .map(new java.util.function.Function<Student, String>() {
                     @Override

@@ -14,19 +14,20 @@ public class PdfReaderTest {
 
     public static void main(String[] args) throws IOException {
 
-        PdfReaderTest pf= new PdfReaderTest();
+        PdfReaderTest pf = new PdfReaderTest();
         String s = pfdReaderTest();
 
     }
 
-    public static String pfdReaderTest() throws  IOException{
+    public static String pfdReaderTest() throws IOException {
         File pdfFile = new File("/Users/starrier/Downloads/nacos.pdf");
         PDDocument document = PDDocument.load(pdfFile);
         // 获取页码
         int pages = document.getNumberOfPages();
 
         // 读文本内容
-        PDFTextStripper stripper  = new PDFTextStripper();;
+        PDFTextStripper stripper = new PDFTextStripper();
+        ;
 
         // 设置按顺序输出
         stripper.setSortByPosition(true);

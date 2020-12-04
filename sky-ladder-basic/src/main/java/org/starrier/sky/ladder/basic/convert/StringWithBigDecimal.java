@@ -17,17 +17,17 @@ public class StringWithBigDecimal {
         System.out.println(bigDecimalToString(BigDecimal.valueOf(1.22222222)));
     }
 
-    public static BigDecimal stringToBigDecimal(String target){
+    public static BigDecimal stringToBigDecimal(String target) {
 
-        if(StringUtils.isBlank(target)){
+        if (StringUtils.isBlank(target)) {
             return null;
         }
 
         return new BigDecimal(target);
     }
 
-    public static String bigDecimalToString(BigDecimal target){
-        if (target == null){
+    public static String bigDecimalToString(BigDecimal target) {
+        if (target == null) {
             return StringUtils.EMPTY;
         }
 

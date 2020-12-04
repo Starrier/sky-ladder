@@ -2,8 +2,6 @@ package org.starrier.sky.ladder.basic.xml;
 
 import com.sun.org.slf4j.internal.Logger;
 import com.sun.org.slf4j.internal.LoggerFactory;
-import jdk.internal.util.xml.impl.Input;
-import org.apache.pdfbox.util.XMLUtil;
 import org.dom4j.Document;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
@@ -23,30 +21,30 @@ public class ReadXML {
 
     private static final Logger logger = LoggerFactory.getLogger(ReadXML.class);
 
-    public static Document readXmlDocument(String filePath){
+    public static Document readXmlDocument(String filePath) {
 
 
         Document doc = null;
 
         // 解析xml文档内容
-        try(InputStream  in = new FileInputStream(new File(filePath))) {
+        try (InputStream in = new FileInputStream(new File(filePath))) {
             SAXReader reader = new SAXReader();
             //in = XMLUtil.class.getClassLoader().getResourceAsStream(filePath);// 获取到xml文件
 
             doc = reader.read(in);
         } catch (Exception e) {
-            logger.error("XMLUtil.readXml error: "+ e);
+            logger.error("XMLUtil.readXml error: " + e);
             return null;
         }
         return doc;
     }
 
-    public static List<Element> readXml(String filePath){
+    public static List<Element> readXml(String filePath) {
 
 
         List<Element> elementList = null;
         // 解析xml文档内容
-        try(InputStream in = new FileInputStream(new File(filePath))) {
+        try (InputStream in = new FileInputStream(new File(filePath))) {
             SAXReader reader = new SAXReader();
             //in = XMLUtil.class.getClassLoader().getResourceAsStream(filePath);// 获取到xml文件
 
@@ -56,17 +54,17 @@ public class ReadXML {
             elementList = root.elements();
             logger.debug("XMLUtil.readXml root name:" + root.getName());
         } catch (Exception e) {
-            logger.error("XMLUtil.readXml error: "+ e);
+            logger.error("XMLUtil.readXml error: " + e);
             return null;
         }
         return elementList;
     }
 
-    public List<HashMap<String, String>> readUserDotXML(String path,String module_id) {
+    public List<HashMap<String, String>> readUserDotXML(String path, String module_id) {
 
         List<HashMap<String, String>> users = new ArrayList<HashMap<String, String>>();
 
-        String rootPath =  path;
+        String rootPath = path;
 
         List<Element> list = readXml(rootPath);
         if (list != null) {

@@ -9,8 +9,8 @@ public class CustomThreadPoolTest {
     public static void main(String[] args) {
         // 创建3个线程的线程池
         CustomThreadPool t = CustomThreadPool.getThreadPool(3);
-        t.execute(new Runnable[] { new Task(), new Task(), new Task() });
-        t.execute(new Runnable[] { new Task(), new Task(), new Task() });
+        t.execute(new Runnable[]{new Task(), new Task(), new Task()});
+        t.execute(new Runnable[]{new Task(), new Task(), new Task()});
         System.out.println(t);
         // 所有线程都执行完成才destory
         t.destroy();

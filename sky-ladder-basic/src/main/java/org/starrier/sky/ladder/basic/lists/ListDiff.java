@@ -1,6 +1,5 @@
 package org.starrier.sky.ladder.basic.lists;
 
-import com.google.common.collect.Lists;
 import org.starrier.sky.ladder.basic.entity.Student;
 import org.starrier.sky.ladder.basic.entity.factory.StudentFactory;
 
@@ -26,9 +25,6 @@ public class ListDiff {
 
         System.out.println(result);
     }
-
-
-
 
 
 }

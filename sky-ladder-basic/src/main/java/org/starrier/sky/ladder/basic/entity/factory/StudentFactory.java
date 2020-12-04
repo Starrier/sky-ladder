@@ -11,26 +11,26 @@ import java.util.List;
  */
 public class StudentFactory {
 
-    public static List<Student> createListA(){
+    public static List<Student> createListA() {
 
-        List<Student> A  = Lists.newArrayList();
+        List<Student> A = Lists.newArrayList();
 
-        A.add(new Student("A",1));
-        A.add(new Student("B",2));
-        A.add(new Student("C",3));
-        A.add(new Student("D",4));
+        A.add(new Student("A", 1));
+        A.add(new Student("B", 2));
+        A.add(new Student("C", 3));
+        A.add(new Student("D", 4));
 
         return A;
 
     }
 
-    public static List<Student> createListB(){
+    public static List<Student> createListB() {
 
         List<Student> B = Lists.newArrayList();
 
-        B.add(new Student("A",1));
-        B.add(new Student("B",2));
-        B.add(new Student("C",3));
+        B.add(new Student("A", 1));
+        B.add(new Student("B", 2));
+        B.add(new Student("C", 3));
 
         return B;
     }
