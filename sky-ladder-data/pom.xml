@@ -18,6 +18,7 @@
 
     <modules>
         <module>sky-ladder-data-mysql</module>
+        <module>sky-ladder-data-mongodb</module>
     </modules>
 
 </project>
