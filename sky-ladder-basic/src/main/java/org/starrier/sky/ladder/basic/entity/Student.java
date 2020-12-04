@@ -1,4 +1,4 @@
-package org.starrier.sky.ladder.basic.lists;
+package org.starrier.sky.ladder.basic.entity;
 
 
 import lombok.AllArgsConstructor;

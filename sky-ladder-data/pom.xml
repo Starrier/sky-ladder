@@ -17,6 +17,7 @@
     <version>0.0.1-SNAPSHOT</version>
 
     <modules>
+        <module>sky-ladder-data-redis</module>
         <module>sky-ladder-data-mysql</module>
         <module>sky-ladder-data-mongodb</module>
     </modules>

@@ -15,15 +15,11 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>sky-ladder-redis</module>
+        <module>sky-ladder-distribution-rxjava</module>
     </modules>
 
 
     <dependencies>
-        <dependency>
-            <groupId>com.aliyun.schedulerx</groupId>
-            <artifactId>schedulerx2-worker</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
