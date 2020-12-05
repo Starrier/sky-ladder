@@ -16,6 +16,7 @@
 
     <modules>
         <module>sky-ladder-distribution-rxjava</module>
+        <module>sky-ladder-distribution-kafka</module>
     </modules>
 
 
