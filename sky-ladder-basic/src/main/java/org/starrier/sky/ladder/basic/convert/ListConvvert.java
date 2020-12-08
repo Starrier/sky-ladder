@@ -16,7 +16,7 @@ public class ListConvvert {
         System.out.println(test);
 
     }
-W
+
 
     public static boolean test(){
         boolean reverseBool = true;
