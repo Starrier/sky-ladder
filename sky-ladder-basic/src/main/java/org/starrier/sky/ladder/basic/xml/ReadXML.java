@@ -1,7 +1,5 @@
 package org.starrier.sky.ladder.basic.xml;
 
-import com.sun.org.slf4j.internal.Logger;
-import com.sun.org.slf4j.internal.LoggerFactory;
 import org.dom4j.Document;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
@@ -19,7 +17,6 @@ import java.util.List;
  */
 public class ReadXML {
 
-    private static final Logger logger = LoggerFactory.getLogger(ReadXML.class);
 
     public static Document readXmlDocument(String filePath) {
 
@@ -33,7 +30,7 @@ public class ReadXML {
 
             doc = reader.read(in);
         } catch (Exception e) {
-            logger.error("XMLUtil.readXml error: " + e);
+        //    logger.error("XMLUtil.readXml error: " + e);
             return null;
         }
         return doc;
@@ -52,9 +49,9 @@ public class ReadXML {
 
             Element root = doc.getRootElement();
             elementList = root.elements();
-            logger.debug("XMLUtil.readXml root name:" + root.getName());
+         //   logger.debug("XMLUtil.readXml root name:" + root.getName());
         } catch (Exception e) {
-            logger.error("XMLUtil.readXml error: " + e);
+         //   logger.error("XMLUtil.readXml error: " + e);
             return null;
         }
         return elementList;
@@ -94,7 +91,7 @@ public class ReadXML {
                         }
                     }
 
-                    logger.debug("XMLFileServiceImpl.readUserDotXML Element module_id:" + module_id + ",users size:" + users.size());
+            //        logger.debug("XMLFileServiceImpl.readUserDotXML Element module_id:" + module_id + ",users size:" + users.size());
                     break;
                 }
             }

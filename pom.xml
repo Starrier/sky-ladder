@@ -17,6 +17,7 @@
         <module>sky-ladder-algorithm</module>
         <module>sky-ladder-basic</module>
         <module>sky-ladder-data</module>
+        <module>sky-ladder-common</module>
     </modules>
 
     <properties>

@@ -31,23 +31,20 @@ public class RxParallCaculate {
 
 
         Disposable subscribe = parallelFlowable1.runOn(Schedulers.io())
-                .map(new Function() {
-                    @Override
-                    public Object apply(Object o) throws Exception {
+                .map(o->{
                         System.out.println("scheduler " + o);
                         result.add(Integer.valueOf(o.toString()));
-                        return new Integer(o.toString());
+                        return String.valueOf(o);
                     }
-                }).sequential()
-                .subscribe(new Consumer() {
-                    @Override
-                    public void accept(Object o) throws Exception {
-                        System.out.println("Consumer  " + o);
-                        if (o != null) {
-                            result.add(Integer.valueOf(o.toString()));
-                        }
+                )
 
+                .sequential()
+                .subscribe(o -> {
+                    System.out.println("Consumer  " + o);
+                    if (o != null) {
+                        result.add(Integer.valueOf(o));
                     }
+
                 });
         return result;
 

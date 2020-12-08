@@ -1,3 +1,4 @@
+/*
 package org.starrier.sky.ladder.basic.xml;
 
 import com.sun.org.slf4j.internal.Logger;
@@ -15,10 +16,12 @@ import java.util.List;
 
 import static org.starrier.sky.ladder.basic.xml.ReadXML.readXmlDocument;
 
+*/
 /**
  * @author starrier
  * @date 2020/11/30
- */
+ *//*
+
 public class CreateXML {
 
     private static final Logger logger = LoggerFactory.getLogger(CreateXML.class);
@@ -156,3 +159,4 @@ public class CreateXML {
         return writen;
     }
 }
+*/
