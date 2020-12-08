@@ -1,9 +1,12 @@
 package org.starrier.sky.ladder.basic.strings;
 
+import com.alibaba.fastjson.JSONArray;
 import com.google.common.base.Splitter;
 
 import org.apache.commons.collections4.CollectionUtils;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -15,11 +18,6 @@ import java.util.stream.Stream;
  * @date 2020/12/8
  */
 public class Soplit {
-
-    public static void main(String[] args) {
-
-
-    }
 
 
     public static String getParam(String url, String name) {
@@ -50,4 +48,6 @@ public class Soplit {
         }
         return result;
     }
+
+
 }
