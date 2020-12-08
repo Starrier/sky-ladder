@@ -1,4 +1,4 @@
-package org.starrier.sky.ladder.basic;
+package org.starrier.sky.ladder.basic.pdf;
 
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;

@@ -1,4 +1,4 @@
-package org.starrier.sky.ladder.basic;
+package org.starrier.sky.ladder.basic.basic;
 
 /**
  * @author starrier
