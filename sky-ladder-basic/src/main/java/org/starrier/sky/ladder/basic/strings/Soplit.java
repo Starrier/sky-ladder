@@ -32,6 +32,7 @@ public class Soplit {
         String[] split = url.split("&");
         List<String[]> collect = Arrays.stream(split)
                 .filter(s -> s.startsWith("filters="))
+
                 .map(s -> s.split("="))
                 .collect(Collectors.toList());
 
