@@ -15,9 +15,10 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>sky-ladder-distribution-rxjava</module>
         <module>sky-ladder-distribution-kafka</module>
         <module>sky-ladder-distribution-mybatis</module>
+        <module>sky-ladder-distribution-rsocket</module>
+        <module>sky-ladder-distribution-rxjava</module>
         <module>sky-ladder-distribution-springboot</module>
     </modules>
 
