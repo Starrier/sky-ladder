@@ -51,6 +51,18 @@ public class FilterStream {
                 .sorted()
                 .cache()
                 .collect(Collectors.toList());
+
+        Single<List<Object>> collectToList = Observable.just(students)
+
+                .map(new Function<List<Student>, Object>() {
+                    @Override
+                    public Object apply(List<Student> students) throws Throwable {
+                        return students.stream().map(Student::getAge);
+                    }
+                })
+                .sorted()
+                .cache()
+                .toList();
     }
 
 }

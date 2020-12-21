@@ -29,11 +29,11 @@
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
+            <!--<dependency>
                 <groupId>com.aliyun.schedulerx</groupId>
                 <artifactId>schedulerx2-worker</artifactId>
                 <version>${schedulerx2.version}</version>
-            </dependency>
+            </dependency>-->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>

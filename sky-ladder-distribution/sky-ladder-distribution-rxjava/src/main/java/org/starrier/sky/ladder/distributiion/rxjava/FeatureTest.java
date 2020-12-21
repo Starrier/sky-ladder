@@ -1,8 +1,11 @@
-package org.starrier.sky.ladder.basic;
+package org.starrier.sky.ladder.distributiion.rxjava;
 
 
 import com.sun.org.slf4j.internal.Logger;
 import com.sun.org.slf4j.internal.LoggerFactory;
+import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.core.Scheduler;
+import io.reactivex.rxjava3.schedulers.Schedulers;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
@@ -28,7 +31,7 @@ public class FeatureTest {
         ExecutorService executor = Executors.newCachedThreadPool();
         Future<String> future = executor.submit(() -> {
             // 提交之后立即执行
-            System.out.println("running");
+            System.out.println("Future running");
             Thread.sleep(3000);
             return "complete";
         });
@@ -46,7 +49,7 @@ public class FeatureTest {
     private void ComputeFuture() {
         CompletableFuture.supplyAsync(()->{
             // 提交之后立即执行
-            System.out.println("running");
+            System.out.println("CompletableFuture running");
             try {
                 Thread.sleep(3000);
             } catch (InterruptedException e) {
@@ -58,5 +61,13 @@ public class FeatureTest {
                 .whenCompleteAsync((result , throwable) ->{
             System.out.println(result);
         } );
+    }
+
+    private void rx(){
+
+        Observable.fromCallable(()->{
+            System.out.println(" rx running");
+            return "complete";
+        }).subscribeOn(Schedulers.io());
     }
 }
