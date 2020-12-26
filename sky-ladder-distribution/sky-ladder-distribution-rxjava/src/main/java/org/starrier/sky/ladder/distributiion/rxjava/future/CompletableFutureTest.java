@@ -78,6 +78,16 @@ public class CompletableFutureTest {
         LOG.info(f.get());
     }
 
+    public static void singleCmpletableFuture() throws ExecutionException, InterruptedException {
+        long startTime = System.currentTimeMillis();
+        LOG.info("time is :" + (System.currentTimeMillis() - startTime));
+        CompletableFuture<String> future3 = CompletableFuture.supplyAsync(() -> "hello");
+        CompletableFuture<String> future4 = CompletableFuture.supplyAsync(() -> "world");
+        CompletableFuture<String> f = future3.thenCombine(future4, (x, y) -> x + "-" + y);
+        LOG.info(f.get());
+    }
+
+
     public static void comboObjectCompletableFuture() throws ExecutionException, InterruptedException {
         long startTime = System.currentTimeMillis();
         LOG.info("time is :" + (System.currentTimeMillis() - startTime));
@@ -94,4 +104,6 @@ public class CompletableFutureTest {
         }).toCompletableFuture();
         System.out.println("result is " + objectCompletableFuture.get());
     }
+
+
 }
