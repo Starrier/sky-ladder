@@ -1,11 +1,10 @@
 package org.starrier.sky.ladder.distributiion.rxjava;
 
 
-import com.sun.org.slf4j.internal.Logger;
-import com.sun.org.slf4j.internal.LoggerFactory;
 import io.reactivex.rxjava3.core.Observable;
-import io.reactivex.rxjava3.core.Scheduler;
 import io.reactivex.rxjava3.schedulers.Schedulers;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
@@ -47,7 +46,7 @@ public class FeatureTest {
     }
 
     private void ComputeFuture() {
-        CompletableFuture.supplyAsync(()->{
+        CompletableFuture.supplyAsync(() -> {
             // 提交之后立即执行
             System.out.println("CompletableFuture running");
             try {
@@ -58,14 +57,14 @@ public class FeatureTest {
             return "complete";
 
         }).thenAccept(String::toString)// 相当于异步回调
-                .whenCompleteAsync((result , throwable) ->{
-            System.out.println(result);
-        } );
+                .whenCompleteAsync((result, throwable) -> {
+                    System.out.println(result);
+                });
     }
 
-    private void rx(){
+    private void rx() {
 
-        Observable.fromCallable(()->{
+        Observable.fromCallable(() -> {
             System.out.println(" rx running");
             return "complete";
         }).subscribeOn(Schedulers.io());

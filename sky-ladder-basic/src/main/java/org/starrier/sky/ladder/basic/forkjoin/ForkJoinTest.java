@@ -47,7 +47,7 @@ public class ForkJoinTest {
         ForkJoinPool forkJoinPool = new ForkJoinPool(Runtime.getRuntime().availableProcessors());
         System.out.println("machine core size is " + Runtime.getRuntime().availableProcessors());
         return forkJoinPool.submit(() ->
-                findAge().parallelStream()
+                findAge().stream()
                         .peek(student -> System.out.println("current thread name is " + Thread.currentThread().getName() + " and current student age is " + student.getAge()))
                         .map(Student::getAge)
                         .filter(integer -> integer > 2)
