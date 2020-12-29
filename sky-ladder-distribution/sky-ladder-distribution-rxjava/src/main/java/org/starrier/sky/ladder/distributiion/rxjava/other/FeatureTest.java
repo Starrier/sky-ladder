@@ -1,4 +1,4 @@
-package org.starrier.sky.ladder.distributiion.rxjava;
+package org.starrier.sky.ladder.distributiion.rxjava.other;
 
 
 import io.reactivex.rxjava3.core.Observable;

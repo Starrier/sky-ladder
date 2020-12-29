@@ -1,4 +1,4 @@
-package org.starrier.sky.ladder.distributiion.rxjava;
+package org.starrier.sky.ladder.distributiion.rxjava.other;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

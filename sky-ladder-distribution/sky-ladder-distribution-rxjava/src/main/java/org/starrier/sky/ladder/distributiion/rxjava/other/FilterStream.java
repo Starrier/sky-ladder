@@ -1,4 +1,5 @@
-package org.starrier.sky.ladder.distributiion.rxjava;
+package org.starrier.sky.ladder.distributiion.rxjava.other;
+
 
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.core.Single;
@@ -54,12 +55,7 @@ public class FilterStream {
 
         Single<List<Object>> collectToList = Observable.just(students)
 
-                .map(new Function<List<Student>, Object>() {
-                    @Override
-                    public Object apply(List<Student> students) throws Throwable {
-                        return students.stream().map(Student::getAge);
-                    }
-                })
+                .map((Function<List<Student>, Object>) students1 -> students1.stream().map(Student::getAge))
                 .sorted()
                 .cache()
                 .toList();
