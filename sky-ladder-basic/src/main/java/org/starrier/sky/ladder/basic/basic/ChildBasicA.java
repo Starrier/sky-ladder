@@ -7,11 +7,16 @@ package org.starrier.sky.ladder.basic.basic;
 public class ChildBasicA extends BasicClass {
 
     static {
-        System.out.println("Child class static is c");
+        System.out.println("Child class static is child-a-static");
     }
 
 
     public ChildBasicA() {
-        System.out.println("Child class construct is d");
+        System.out.println("Child class construct is child-a-construct");
+    }
+
+    @Override
+    public void hello(){
+        System.out.println("Child class-a hello method is hello-child-a");
     }
 }

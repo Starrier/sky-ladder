@@ -20,6 +20,7 @@
         <module>sky-ladder-distribution-rsocket</module>
         <module>sky-ladder-distribution-rxjava</module>
         <module>sky-ladder-distribution-springboot</module>
+        <module>sky-ladder-distribution-akka</module>
     </modules>
 
 

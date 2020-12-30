@@ -7,10 +7,14 @@ package org.starrier.sky.ladder.basic.basic;
 public class BasicClass {
 
     static {
-        System.out.println("Basic class static is a ");
+        System.out.println("Basic class static is basic-static ");
     }
 
     public BasicClass() {
-        System.out.println("Basic class construct is b");
+        System.out.println("Basic class construct is basic-construct");
+    }
+
+    public void hello(){
+        System.out.println("Basic class hello method is hello-basic");
     }
 }
