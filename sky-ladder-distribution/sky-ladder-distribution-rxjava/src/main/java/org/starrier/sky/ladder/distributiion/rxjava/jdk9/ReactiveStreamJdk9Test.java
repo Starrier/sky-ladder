@@ -1,13 +1,7 @@
 package org.starrier.sky.ladder.distributiion.rxjava.jdk9;
 
-import lombok.SneakyThrows;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.concurrent.Flow;
-import java.util.concurrent.SubmissionPublisher;
-import java.util.concurrent.TimeUnit;
-import java.util.stream.IntStream;
 
 /**
  * @author starrier
@@ -23,9 +17,10 @@ public class ReactiveStreamJdk9Test {
 
     }
 
+    // TODO 以下代码需要 JDK 等级 大于等于 9
     public static void subscribeTest() throws InterruptedException {
         // 1.创建 生产者Publisher JDK9自带的 实现了Publisher接口
-        SubmissionPublisher<Integer> publisher = new SubmissionPublisher<>();
+       /* SubmissionPublisher<Integer> publisher = new SubmissionPublisher<>();
         Flow.Subscriber<Integer> subscriber = new Flow.Subscriber<>() {
             private Flow.Subscription subscription;
             @Override//System.out.println("订阅成功。。");System.out.println("订阅方法里请求一个数据");
@@ -53,7 +48,7 @@ public class ReactiveStreamJdk9Test {
         //submit是一个阻塞方法，此时会调用订阅者的onNext方法
         publisher.submit(i);});
         //5.发布者 数据都已发布完成后，关闭发送，此时会回调订阅者的onComplete方法
-        publisher.close();
+        publisher.close();*/
         //主线程睡一会,模拟耗时操作
         Thread.currentThread().join(100000);
     }

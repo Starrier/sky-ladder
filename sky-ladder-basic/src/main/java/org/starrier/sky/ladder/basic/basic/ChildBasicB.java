@@ -19,4 +19,12 @@ public class ChildBasicB extends BasicClass {
     }
 
 
+    public static void main(String[] args) {
+
+        String a = null;
+
+        System.out.println((Object)a);
+        System.out.println((Object)null);
+    }
+
 }
