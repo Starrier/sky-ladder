@@ -15,9 +15,9 @@ public class JsonMap {
         stringJsonToMap("");
     }
 
-    public static Map<Object,Object> stringJsonToMap(String jsonString){
+    public static Map<Object, Object> stringJsonToMap(String jsonString) {
 
-        Map<Object,Object> parse = (Map<Object, Object>) JSON.parse(jsonString);
+        Map<Object, Object> parse = (Map<Object, Object>) JSON.parse(jsonString);
         System.out.println(parse.toString());
         return parse;
     }

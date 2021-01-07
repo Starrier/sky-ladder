@@ -10,21 +10,20 @@ public class ChildBasicB extends BasicClass {
         System.out.println("Child class static is child-b-static");
     }
 
-    public ChildBasicB(){
+    public ChildBasicB() {
         System.out.println("Child class construct is child-b-construct");
     }
-
-    public void hello(){
-        System.out.println("Child class hello method is hello-child-b");
-    }
-
 
     public static void main(String[] args) {
 
         String a = null;
 
-        System.out.println((Object)a);
-        System.out.println((Object)null);
+        System.out.println((Object) a);
+        System.out.println((Object) null);
+    }
+
+    public void hello() {
+        System.out.println("Child class hello method is hello-child-b");
     }
 
 }

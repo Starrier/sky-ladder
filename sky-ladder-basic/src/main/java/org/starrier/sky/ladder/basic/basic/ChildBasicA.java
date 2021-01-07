@@ -16,7 +16,7 @@ public class ChildBasicA extends BasicClass {
     }
 
     @Override
-    public void hello(){
+    public void hello() {
         System.out.println("Child class-a hello method is hello-child-a");
     }
 }

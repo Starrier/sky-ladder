@@ -3,7 +3,6 @@ package org.starrier.sky.ladder.basic.lambda;
 import org.starrier.sky.ladder.basic.entity.Student;
 import org.starrier.sky.ladder.basic.entity.factory.StudentFactory;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,7 +32,7 @@ public class StudentTest {
 
         long startSimple = System.currentTimeMillis();
         List<Integer> list1 = StudentFactoryConvert.studentsConvert(result);
-        System.out.println(System.currentTimeMillis() -  startSimple);
+        System.out.println(System.currentTimeMillis() - startSimple);
 
         System.out.println();
     }

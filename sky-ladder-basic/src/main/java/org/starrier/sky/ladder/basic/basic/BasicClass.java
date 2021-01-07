@@ -14,7 +14,7 @@ public class BasicClass {
         System.out.println("Basic class construct is basic-construct");
     }
 
-    public void hello(){
+    public void hello() {
         System.out.println("Basic class hello method is hello-basic");
     }
 }

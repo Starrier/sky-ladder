@@ -16,24 +16,24 @@ public class DesUtil {
 
     private static Key key;
 
-    private static String KEY_STR="myKey";
-    private static String CHARSETNAME="UTF-8";
-    private static String ALGORITHM="DES";
+    private static String KEY_STR = "myKey";
+    private static String CHARSETNAME = "UTF-8";
+    private static String ALGORITHM = "DES";
 
 
     static {
         try {
             //生成DES算法对象
-            KeyGenerator generator=KeyGenerator.getInstance(ALGORITHM);
+            KeyGenerator generator = KeyGenerator.getInstance(ALGORITHM);
             //运用SHA1安全策略
-            SecureRandom secureRandom=SecureRandom.getInstance("SHA1PRNG");
+            SecureRandom secureRandom = SecureRandom.getInstance("SHA1PRNG");
             //设置上密钥种子
             secureRandom.setSeed(KEY_STR.getBytes());
             //初始化基于SHA1的算法对象
             generator.init(secureRandom);
             //生成密钥对象
-            key=generator.generateKey();
-            generator=null;
+            key = generator.generateKey();
+            generator = null;
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

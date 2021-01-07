@@ -12,7 +12,7 @@ import io.rsocket.util.DefaultPayload;
  */
 public class RequestStream {
 
-    public void requestStream(){
+    public void requestStream() {
         RSocket socket =
                 RSocketConnector.connectWith(TcpClientTransport.create("localhost", 7000)).block();
 

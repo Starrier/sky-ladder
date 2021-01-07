@@ -24,6 +24,12 @@ public class Student {
 
     private Integer age;
 
+    public static void main(String[] args) {
+        Student student = new Student();
+        student.setName("2");
+        System.out.println(student.toString());
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -47,12 +53,6 @@ public class Student {
             return false;
         }
         return true;
-    }
-
-    public static void main(String[] args) {
-        Student student = new Student();
-        student.setName("2");
-        System.out.println(student.toString());
     }
 
 }

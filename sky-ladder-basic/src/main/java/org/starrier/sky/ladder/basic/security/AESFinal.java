@@ -78,7 +78,7 @@ public class AESFinal {
     public static SecretKey getSecretKey() throws UnsupportedEncodingException, NoSuchAlgorithmException {
         // 获得经 BASE64 处理之后的 AES 密钥
         String strKeyAES = AESFinal.getStrKeyAES();
-       // System.out.println("经BASE64处理之后的密钥：" + strKeyAES);
+        // System.out.println("经BASE64处理之后的密钥：" + strKeyAES);
 
         // 将 BASE64 处理之后的 AES 密钥转为 SecretKey
         SecretKey secretKey = AESFinal.strKey2SecretKey(strKeyAES);

@@ -4,8 +4,6 @@ import io.reactivex.rxjava3.annotations.NonNull;
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.core.SingleObserver;
 import io.reactivex.rxjava3.disposables.Disposable;
-import io.reactivex.rxjava3.functions.Action;
-import io.reactivex.rxjava3.internal.operators.flowable.FlowableOnBackpressureDrop;
 import org.springframework.util.CollectionUtils;
 
 import java.util.List;
@@ -16,13 +14,13 @@ import java.util.List;
  */
 public class RxToListTest {
 
-    private static String[] strings = new String[]{"one","two","three","four","five"};
+    private static String[] strings = new String[]{"one", "two", "three", "four", "five"};
 
     public static void main(String[] args) {
         valuesToList();
     }
 
-    public static void valuesToList(){
+    public static void valuesToList() {
 
         Observable.fromArray(strings)
                 .toList()
@@ -38,7 +36,7 @@ public class RxToListTest {
 
                     @Override
                     public void onSuccess(@NonNull List<String> strings) {
-                        if(!CollectionUtils.isEmpty(strings)){
+                        if (!CollectionUtils.isEmpty(strings)) {
                             strings.forEach(System.out::println);
                         }
 

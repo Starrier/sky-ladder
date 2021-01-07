@@ -6,5 +6,5 @@ package org.starrier.sky.ladder.distribution.kafka.stream;
  */
 public class StreamTest {
 
-    
+
 }

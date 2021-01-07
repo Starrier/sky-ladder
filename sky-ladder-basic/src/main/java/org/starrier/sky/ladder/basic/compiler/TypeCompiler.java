@@ -13,7 +13,7 @@ public class TypeCompiler {
     @SuppressWarnings("unused")
     public static void main(String[] args) {
 
-        HashMap<String,Integer> stringIntegerHashMap = new HashMap<>();
+        HashMap<String, Integer> stringIntegerHashMap = new HashMap<>();
 
         List<String> stringList = new ArrayList<>();
         unsafeAdd(stringList, Integer.valueOf(42));

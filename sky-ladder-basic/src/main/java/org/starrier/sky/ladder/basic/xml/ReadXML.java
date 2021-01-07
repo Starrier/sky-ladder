@@ -30,7 +30,7 @@ public class ReadXML {
 
             doc = reader.read(in);
         } catch (Exception e) {
-        //    logger.error("XMLUtil.readXml error: " + e);
+            //    logger.error("XMLUtil.readXml error: " + e);
             return null;
         }
         return doc;
@@ -49,9 +49,9 @@ public class ReadXML {
 
             Element root = doc.getRootElement();
             elementList = root.elements();
-         //   logger.debug("XMLUtil.readXml root name:" + root.getName());
+            //   logger.debug("XMLUtil.readXml root name:" + root.getName());
         } catch (Exception e) {
-         //   logger.error("XMLUtil.readXml error: " + e);
+            //   logger.error("XMLUtil.readXml error: " + e);
             return null;
         }
         return elementList;
@@ -91,7 +91,7 @@ public class ReadXML {
                         }
                     }
 
-            //        logger.debug("XMLFileServiceImpl.readUserDotXML Element module_id:" + module_id + ",users size:" + users.size());
+                    //        logger.debug("XMLFileServiceImpl.readUserDotXML Element module_id:" + module_id + ",users size:" + users.size());
                     break;
                 }
             }

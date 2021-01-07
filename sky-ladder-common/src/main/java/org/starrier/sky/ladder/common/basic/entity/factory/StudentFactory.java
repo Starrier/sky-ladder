@@ -1,7 +1,6 @@
 package org.starrier.sky.ladder.common.basic.entity.factory;
 
 
-
 import com.google.common.collect.Lists;
 import org.starrier.sky.ladder.common.basic.entity.Student;
 

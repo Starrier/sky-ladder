@@ -6,7 +6,7 @@ package org.starrier.sky.ladder.basic;
  */
 public class StudentTest {
 
-    public void testIgnoreProperties(){
+    public void testIgnoreProperties() {
 
     }
 }

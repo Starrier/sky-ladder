@@ -10,12 +10,12 @@ public class DesignSource {
 
     }
 
-    private static void commandRelation(){
-        int a=1;
-        int b=a+1;
-        System.out.print("b="+b);    //  b=2
-        a=10;
-        System.out.print("b="+b);     //  b=2
+    private static void commandRelation() {
+        int a = 1;
+        int b = a + 1;
+        System.out.print("b=" + b);    //  b=2
+        a = 10;
+        System.out.print("b=" + b);     //  b=2
     }
 
     /*private static void reactivexRelation(){

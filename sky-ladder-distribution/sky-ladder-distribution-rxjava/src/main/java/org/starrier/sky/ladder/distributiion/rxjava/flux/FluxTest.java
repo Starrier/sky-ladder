@@ -12,9 +12,9 @@ public class FluxTest {
 
     }
 
-    public static void fluxArray(){
+    public static void fluxArray() {
 
-        String[] strings = new String[]{"one","two","three"};
+        String[] strings = new String[]{"one", "two", "three"};
         Flux.fromArray(strings).collectList();
 
     }

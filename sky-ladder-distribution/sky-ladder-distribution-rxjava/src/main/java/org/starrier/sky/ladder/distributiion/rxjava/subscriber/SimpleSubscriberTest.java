@@ -15,7 +15,7 @@ public class SimpleSubscriberTest<T> extends BaseSubscriber<T> {
     }
 
     public void hookOnNext(T value) {
-        System.out.println("value="+value);
+        System.out.println("value=" + value);
         request(1);
     }
 

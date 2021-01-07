@@ -1,7 +1,7 @@
 package org.starrier.sky.ladder.basic.security;
 
-import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.codec.binary.Hex;
+import org.apache.commons.lang3.StringUtils;
 
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
@@ -42,7 +42,6 @@ public class AESUtil {
         SecretKey secretKey = keyGenerator.generateKey();   //生成密钥
         return secretKey.getEncoded();
     }
-
 
 
     /**

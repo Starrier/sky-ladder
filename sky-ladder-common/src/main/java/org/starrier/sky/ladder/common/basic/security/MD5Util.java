@@ -1,7 +1,6 @@
 package org.starrier.sky.ladder.common.basic.security;
 
 import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 
 /**
  * @author starrier
@@ -22,7 +21,6 @@ public class MD5Util {
         md5.update(data);
         return md5.digest();
     }
-
 
 
 }

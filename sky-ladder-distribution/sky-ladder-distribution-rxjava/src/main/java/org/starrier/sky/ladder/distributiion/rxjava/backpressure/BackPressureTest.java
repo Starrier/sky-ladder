@@ -16,11 +16,11 @@ public class BackPressureTest {
         backpressure();
     }
 
-    public static void backpressure(){
+    public static void backpressure() {
 
-       // Flux.range是一个快的Publisher；
-        Flux.range(1,6)
-                .doOnRequest(n-> System.out.println("current consumer info is " + n))
+        // Flux.range是一个快的Publisher；
+        Flux.range(1, 6)
+                .doOnRequest(n -> System.out.println("current consumer info is " + n))
                 // 通过重写 BaseSubscriber 的方法来自定义 Subscriber；
                 .subscribe(new BaseSubscriber<Integer>() {
                     @Override
@@ -35,7 +35,7 @@ public class BackPressureTest {
                     // hookOnNext 定义每次在收到一个元素的时候的操作；
                     protected void hookOnNext(Integer value) {
                         try {
-                           //  sleep 1秒钟来模拟慢的Subscriber；
+                            //  sleep 1秒钟来模拟慢的Subscriber；
                             TimeUnit.SECONDS.sleep(1);
                         } catch (InterruptedException e) {
                             e.printStackTrace();

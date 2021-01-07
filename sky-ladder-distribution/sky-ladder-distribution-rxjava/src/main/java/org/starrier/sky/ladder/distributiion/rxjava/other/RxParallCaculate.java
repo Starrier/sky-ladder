@@ -2,8 +2,6 @@ package org.starrier.sky.ladder.distributiion.rxjava.other;
 
 import io.reactivex.rxjava3.core.Flowable;
 import io.reactivex.rxjava3.disposables.Disposable;
-import io.reactivex.rxjava3.functions.Consumer;
-import io.reactivex.rxjava3.functions.Function;
 import io.reactivex.rxjava3.parallel.ParallelFlowable;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 
@@ -31,11 +29,11 @@ public class RxParallCaculate {
 
 
         Disposable subscribe = parallelFlowable1.runOn(Schedulers.io())
-                .map(o->{
-                        System.out.println("scheduler " + o);
-                        result.add(Integer.valueOf(o.toString()));
-                        return String.valueOf(o);
-                    }
+                .map(o -> {
+                            System.out.println("scheduler " + o);
+                            result.add(Integer.valueOf(o.toString()));
+                            return String.valueOf(o);
+                        }
                 )
 
                 .sequential()

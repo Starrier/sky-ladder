@@ -1,7 +1,5 @@
 package org.starrier.sky.ladder.distribution.rsocket.service;
 
-import reactor.core.publisher.Mono;
-
 /**
  * @author starrier
  * @date 2020/12/21
@@ -12,7 +10,7 @@ public class RSocketService {
 
     }
 
-    private static void clientService(){
+    private static void clientService() {
       /*  RSocketFactory.receive()
                 .acceptor(
                         (setupPayload, reactiveSocket) ->

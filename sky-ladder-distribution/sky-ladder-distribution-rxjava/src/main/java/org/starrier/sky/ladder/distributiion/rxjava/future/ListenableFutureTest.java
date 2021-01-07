@@ -35,7 +35,7 @@ public class ListenableFutureTest {
     // 将实现了callable的任务放入到线程池中，得到一个带有回调机制的ListenableFuture实例，
     // 通过Futures.addCallback方法对得到的ListenableFuture实例进行监听，一旦得到结果就进入到onSuccess方法中，
     // 在onSuccess方法中将查询的结果存入到集合中
-    public static void listenableFutureTest()  {
+    public static void listenableFutureTest() {
 
         final List<String> value = Collections.synchronizedList(new ArrayList<>());
         try {

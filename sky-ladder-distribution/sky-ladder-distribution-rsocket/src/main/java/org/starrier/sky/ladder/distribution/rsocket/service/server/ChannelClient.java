@@ -19,7 +19,7 @@ public class ChannelClient {
 
     }
 
-    public static void channel(){
+    public static void channel() {
         RSocket socket = RSocketConnector.connectWith(TcpClientTransport.create("localhost", 7004)).block();
         socket.requestChannel(
                 Flux.interval(Duration.ofMillis(1000)).map(i -> DefaultPayload.create("我是客户端啊")))

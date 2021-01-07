@@ -10,7 +10,6 @@ import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
-import java.util.Arrays;
 
 /**
  * @author starrier
@@ -28,6 +27,7 @@ public class AES2Utils {
     public static final String password = "1234567812345678";
 
     public static final String key = "1234567812345678";
+
     /***
      * 加密
      * @param original 需要加密的参数（注意必须是16位）
@@ -50,7 +50,7 @@ public class AES2Utils {
         return Base64Util.encryptBASE64(bytes);
     }
 
-    public static String encrypt(String content  ) throws NoSuchPaddingException, NoSuchAlgorithmException, UnsupportedEncodingException, InvalidKeyException, BadPaddingException, IllegalBlockSizeException {
+    public static String encrypt(String content) throws NoSuchPaddingException, NoSuchAlgorithmException, UnsupportedEncodingException, InvalidKeyException, BadPaddingException, IllegalBlockSizeException {
         SecretKeySpec key = new SecretKeySpec(password.getBytes(), "AES");
         Cipher cipher = Cipher.getInstance("AES/ECB/NoPadding");
         byte[] byteContent = content.getBytes(StandardCharsets.UTF_8);
@@ -62,8 +62,10 @@ public class AES2Utils {
 
         return result.toString();
     }
+
     /**
      * 解密
+     *
      * @param encrypted 需要解密的参数
      * @return
      * @throws Exception
@@ -84,7 +86,9 @@ public class AES2Utils {
         return new String(bytes);
     }
 
-    /**将二进制转换成16进制
+    /**
+     * 将二进制转换成16进制
+     *
      * @param buf
      * @return
      */
@@ -103,7 +107,7 @@ public class AES2Utils {
     public static void main(String[] args) throws Exception {
 
         String targetSource = "M2970198010";
-        System.out.println("original source is "+ targetSource);
+        System.out.println("original source is " + targetSource);
 
         String encrypt = encrypt(targetSource);
         System.out.println("encrypt result is " + encrypt);

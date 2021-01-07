@@ -18,19 +18,17 @@ public class ListConvvert {
     }
 
 
-    public static boolean test(){
+    public static boolean test() {
         boolean reverseBool = true;
 
-        List<Integer> idList= Arrays.asList(1,2,3);
+        List<Integer> idList = Arrays.asList(1, 2, 3);
 
-        List<Integer> list = Arrays.asList(2,3);
+        List<Integer> list = Arrays.asList(2, 3);
 
-        if(reverseBool)
-        {
+        if (reverseBool) {
             return !list.containsAll(idList);
-        }else
-        {
-            return idList.stream().anyMatch(x->list.contains(x));
+        } else {
+            return idList.stream().anyMatch(x -> list.contains(x));
         }
     }
 }

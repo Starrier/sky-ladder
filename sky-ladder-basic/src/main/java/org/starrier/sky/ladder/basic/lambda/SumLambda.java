@@ -1,8 +1,6 @@
 package org.starrier.sky.ladder.basic.lambda;
 
-import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
-import java.util.function.Consumer;
 import java.util.function.Function;
 
 /**
@@ -16,7 +14,7 @@ public class SumLambda {
         System.out.println(sum);
     }
 
-    public static Integer sum(Integer a,Integer b){
+    public static Integer sum(Integer a, Integer b) {
         BiFunction<Integer, Integer, Integer> biFunction = new BiFunction<Integer, Integer, Integer>() {
 
             @Override

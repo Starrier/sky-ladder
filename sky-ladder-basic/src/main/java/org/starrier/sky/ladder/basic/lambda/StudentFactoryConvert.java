@@ -14,9 +14,9 @@ import java.util.stream.Collectors;
  */
 public class StudentFactoryConvert {
 
-    public static List<Integer> studentsConvertParaller(List<Student> students){
+    public static List<Integer> studentsConvertParaller(List<Student> students) {
 
-        if(CollectionUtils.isEmpty(students)){
+        if (CollectionUtils.isEmpty(students)) {
             return new ArrayList<>();
         }
 
@@ -28,9 +28,9 @@ public class StudentFactoryConvert {
 
     }
 
-    public static List<Integer> studentsConvert(List<Student> students){
+    public static List<Integer> studentsConvert(List<Student> students) {
 
-        if(CollectionUtils.isEmpty(students)){
+        if (CollectionUtils.isEmpty(students)) {
             return new ArrayList<>();
         }
 
@@ -42,9 +42,9 @@ public class StudentFactoryConvert {
 
     }
 
-    public static Integer studentConvert(Student student){
+    public static Integer studentConvert(Student student) {
 
-        if(Objects.isNull(student)){
+        if (Objects.isNull(student)) {
             return 0;
         }
 

@@ -11,16 +11,16 @@ public class ClassTypeConvert {
     public static void main(String[] args) {
 
         String a = null;
-        System.out.println((Object)a);
+        System.out.println((Object) a);
 
         Integer b = null;
-        System.out.println((Object)b);
+        System.out.println((Object) b);
 
 
         Student c = null;
-        System.out.println((Object)c);
+        System.out.println((Object) c);
 
-        int d = (Integer)b;
+        int d = (Integer) b;
         System.out.println(d);
     }
 }

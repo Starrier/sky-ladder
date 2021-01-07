@@ -9,7 +9,6 @@ import javax.crypto.KeyGenerator;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
-import java.nio.charset.StandardCharsets;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
@@ -28,11 +27,11 @@ public class AES3Utils {
     public static String getStrKeyAES() throws NoSuchAlgorithmException {
 
 
-        SecureRandom secureRandom = SecureRandom.getInstance("SHA1PRNG") ;
+        SecureRandom secureRandom = SecureRandom.getInstance("SHA1PRNG");
         secureRandom.setSeed("encodeRules".getBytes());
         KeyGenerator keyGen = KeyGenerator.getInstance("AES");
         // 这里可以是 128、192、256、越大越安全
-        keyGen.init(256, secureRandom);
+        keyGen.init(128, secureRandom);
         SecretKey secretKey = keyGen.generateKey();
         return Base64Utils.encodeToString(secretKey.getEncoded());
     }
@@ -74,6 +73,11 @@ public class AES3Utils {
         Cipher cipher = Cipher.getInstance("AES");
         cipher.init(Cipher.DECRYPT_MODE, secretKey);
         return cipher.doFinal(content);
+    }
+
+    public static void main(String[] args) {
+        String encrypt = "M571369560";
+
     }
 
 }

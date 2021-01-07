@@ -20,23 +20,24 @@ public class RxTest {
     }
 
 
-    public static void cacheAbleWithout(){
-         Observable<Integer> work = Observable.fromCallable(()->{
-             System.out.println("doing work");
-             return 1;
-         });
-         // without cache
-         work.subscribe(System.out::println);
-         work.map(integer -> integer*2).subscribe(System.out::println);
+    public static void cacheAbleWithout() {
+        Observable<Integer> work = Observable.fromCallable(() -> {
+            System.out.println("doing work");
+            return 1;
+        });
+        // without cache
+        work.subscribe(System.out::println);
+        work.map(integer -> integer * 2).subscribe(System.out::println);
     }
-    private static void cacheAble(){
-        Observable<Integer> work = Observable.fromCallable(()->{
+
+    private static void cacheAble() {
+        Observable<Integer> work = Observable.fromCallable(() -> {
             System.out.println("doing work");
             return 1;
         }).cache();
         // cache
         work.subscribe(System.out::println);
-        work.map(integer -> integer*2).subscribe(System.out::println);
+        work.map(integer -> integer * 2).subscribe(System.out::println);
 
     }
 

@@ -4,7 +4,6 @@ import io.reactivex.rxjava3.annotations.NonNull;
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.core.SingleObserver;
 import io.reactivex.rxjava3.disposables.Disposable;
-import io.reactivex.rxjava3.functions.Function;
 import org.starrier.sky.ladder.common.basic.entity.Student;
 import org.starrier.sky.ladder.common.basic.entity.factory.StudentFactory;
 
@@ -32,6 +31,7 @@ public class RxToMap {
                 .subscribe(new SingleObserver<Map<String, Student>>() {
 
                     private Disposable disposable;
+
                     @Override
                     public void onSubscribe(@NonNull Disposable d) {
                         System.out.println("connect status " + d.isDisposed());

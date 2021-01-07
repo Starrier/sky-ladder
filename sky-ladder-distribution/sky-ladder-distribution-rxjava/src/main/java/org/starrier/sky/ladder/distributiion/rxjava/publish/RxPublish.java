@@ -12,7 +12,7 @@ public class RxPublish {
     }
 
 
-    public static void publishTest(){
+    public static void publishTest() {
 
     }
 }

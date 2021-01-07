@@ -15,9 +15,11 @@ public class BaseSubscriberTest {
         SimpleSubscriberTest<Integer> subscriber = new SimpleSubscriberTest<>();
 
         // 使用lambda
-        range.subscribe(i -> System.out.println("i="+i),
+        range.subscribe(i -> System.out.println("i=" + i),
                 error -> System.err.println("Error " + error),
-                () -> {System.out.println("Done");},
+                () -> {
+                    System.out.println("Done");
+                },
                 s -> s.request(10));
 
         // 使用SampleSubscriber
