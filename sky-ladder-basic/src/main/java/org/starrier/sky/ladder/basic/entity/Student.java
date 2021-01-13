@@ -2,6 +2,7 @@ package org.starrier.sky.ladder.basic.entity;
 
 
 import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -13,6 +14,7 @@ import lombok.ToString;
  */
 @Getter
 @Setter
+@EqualsAndHashCode
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
@@ -22,7 +24,7 @@ public class Student {
 
     private Integer age;
 
-    @Override
+   /* @Override
     public boolean equals(Object obj) {
         if (this == obj) {
             return true;
@@ -45,6 +47,6 @@ public class Student {
             return false;
         }
         return true;
-    }
+    }*/
 
 }

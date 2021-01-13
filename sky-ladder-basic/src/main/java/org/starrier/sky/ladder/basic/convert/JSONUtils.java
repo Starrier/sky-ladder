@@ -1,4 +1,4 @@
-package org.starrier.sky.ladder.basic;
+package org.starrier.sky.ladder.basic.convert;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONException;
@@ -80,8 +80,7 @@ public class JSONUtils {
 
 
         //json转换为list
-        List<Student> list = new ArrayList<>();
-        list = JSONObject.parseArray(studentJson, Student.class);
+        List<Student> list = JSONObject.parseArray(studentJson, Student.class);
 
     }
 
