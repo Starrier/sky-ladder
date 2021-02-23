@@ -3,24 +3,23 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>8</source>
-                    <target>8</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+
 
     <parent>
         <groupId>org.starrier</groupId>
         <artifactId>sky-ladder</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>sky-ladder-basic-basics</module>
+        <module>sky-ladder-basic-collections</module>
+        <module>sky-ladder-basic-jvm</module>
+        <module>sky-ladder-basic-lambda</module>
+        <module>sky-ladder-basic-stream</module>
+        <module>sky-ladder-basic-thread</module>
+    </modules>
 
     <artifactId>sky-ladder-basic</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -104,5 +103,18 @@
 
     </dependencies>
 
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

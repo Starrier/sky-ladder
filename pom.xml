@@ -26,6 +26,12 @@
         <schedulerx2.version>1.2.1.1</schedulerx2.version>
     </properties>
 
+    <developers>
+        <developer>
+            <name>imperater</name>
+            <email>imperater@starrier.org</email>
+        </developer>
+    </developers>
 
     <dependencyManagement>
         <dependencies>
