@@ -1,6 +1,7 @@
 package org.starrier.sky.ladder.common.basic.basic;
 
-import org.starrier.sky.ladder.basic.entity.Student;
+
+import org.starrier.sky.ladder.common.basic.entity.Student;
 
 /**
  * @author starrier

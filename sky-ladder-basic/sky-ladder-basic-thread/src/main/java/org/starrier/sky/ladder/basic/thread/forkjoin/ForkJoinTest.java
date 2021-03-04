@@ -6,7 +6,9 @@ import org.checkerframework.checker.units.qual.A;
 import org.starrier.sky.ladder.common.basic.entity.Student;
 import org.starrier.sky.ladder.common.basic.entity.factory.StudentFactory;
 
+import javax.swing.text.html.Option;
 import java.util.List;
+import java.util.Optional;
 import java.util.concurrent.ForkJoinPool;
 import java.util.stream.Collectors;
 
@@ -40,6 +42,10 @@ public class ForkJoinTest {
         List<Integer> list = forkJoinTest();
         System.out.println("---------");
         System.out.println(list);
+
+        String a = null;
+        String ss = Optional.of(a.toString()).orElse("");
+        System.out.println(ss);
 
     }
 
@@ -85,4 +91,5 @@ public class ForkJoinTest {
     public static List<Student> findAge() {
         return StudentFactory.createListA();
     }
+
 }
